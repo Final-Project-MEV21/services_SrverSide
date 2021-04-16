@@ -1,0 +1,40 @@
+{   
+    "_id":1 ,
+    "User_name" : "Test",
+    "password" : "string",
+    "Email" : "Test@test.test",
+    "Dog" :[{
+
+        "name": "Rem",
+        "sex": "Male" ,
+        "weight": 30, 
+        "age": 7 ,
+        "Breed":
+        {
+            "Name": "Border Collie" , 
+            "Origin": "United Kingdom/Ireland", 
+            "Breed": "Herding",
+            "Size": "Medium" ,
+            "Type": "Purebred", 
+            "LifeSpan": "12-15 years", 
+            "Height": "Male: 19-22 inches (48-56 cm)\nFemale: 18-21 inches (46-53 cm)", 
+            "Weight": "Male: 30-45 pounds (14-20 kg)\nFemale: 27-42 pounds (12-19 kg)", 
+            "HealthIssues": true, 
+            "Trainability": 
+            "Easy Training","Intelligence": 5
+        },
+        "allergy" : ["chicen" , "pinecelin" ,"fish"],
+        "vaccines" :[{"name" : "kalevet" , "date" : "12.08.2021"} ,
+                    {"name":"tolat a park" , "date" : "12.02.2021"}
+        
+        ],
+        "food" : [
+                {
+                    "food_name" : "Akana" , 
+                    "ingredient_list" :["chiken" , "blue beries" , "rice"],
+                    "food_amount_grams" : 500,
+                    "calories_grams" : 200
+                }]     
+    }]
+}
+  
