@@ -18,8 +18,6 @@ class API
         $loginQuery = array('Breed'=>$userName);
         $options = ['projection' => ['_id']];
         $result = $this->db_collection->findOne($loginQuery , $options);
-
         var_dump($result);
-
     }
 }
