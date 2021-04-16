@@ -1,7 +1,5 @@
 <?php
     require_once 'API.php';
-
-    
     function jsonValidation($str){
         json_decode($str);
             return json_last_errror() == JSON_ERROR_NONE;
@@ -19,7 +17,7 @@
 //        print_r("Hello Dummy");
 //    }
 
-    $api  = new API();
+    $api  =new API();
     if($api->Login("Test1")){
         echo "User Exists";
     }else{
