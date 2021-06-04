@@ -1,16 +1,16 @@
 'use strict'
 
-const properties = require('../package.json');
+const { json } = require('express');
+const login = require('../service/login');
 const sum = require('../service/sum');
 
 const controllers = {
-    about: function (req , res) {
-        const aboutInfo = {
-            name : properties.name,
-            version: properties.version,
-        } 
-
-        res.json(aboutInfo);
+    login: function (req , res) {
+        login.checkUserName(req , res , function(err , result){
+            if(err)
+                res.send(err);
+            res.json(result);
+        });
     },
     getSum: function(req ,res) {
         sum.countSum(req , res  , function(err  , num3){
@@ -21,4 +21,4 @@ const controllers = {
     },
 };
 
-module.exports = controllers
+module.exports = controllers;
