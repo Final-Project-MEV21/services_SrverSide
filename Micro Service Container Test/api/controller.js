@@ -9,10 +9,10 @@ const controllers = {
     
     
     getSum: function(req ,res) {
-        sum.countSum(req , res  , function(err  , num3){
+        sum.countSum(req , res  , function(err  , sum){
             if(err)
                 res.send(err);
-            res.json(num3);
+            res.json(sum);
         });
     },
 
