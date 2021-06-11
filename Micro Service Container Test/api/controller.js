@@ -2,19 +2,11 @@
 
 const { json } = require('express');
 
-const sum = require('../service/sum');
+const login = require('../service/Login');
 const name = require('../service/name');
 
 const controllers = {
     
-    
-    getSum: function(req ,res) {
-        sum.countSum(req , res  , function(err  , sum){
-            if(err)
-                res.send(err);
-            res.json(sum);
-        });
-    },
 
     getName: function(req, res){
         name.countName(req,res, function(err, fullName){
@@ -25,7 +17,14 @@ const controllers = {
         });
     },
 
+    singIn: function(req , res){
+        login.getUserName(req , res , function(err,authenticated){
+            res.json(authenticated);
+        });
+    },
     
 };
+
+
 
 module.exports = controllers;
